@@ -47,28 +47,6 @@ body {
     max-width: 400px; /* Ancho máximo fijo */
 }
 
-/* GRUPOS DE INPUT - Estructura para campos de entrada */
-.input-group {
-    margin-bottom: 15px; /* Separación entre grupos */
-    text-align: left; /* Alineación texto a la izquierda */
-}
-
-.input-group label {
-    display: block; /* Hace que el label ocupe toda la línea */
-    margin-bottom: 5px; /* Espacio entre label e input */
-    color: #555; /* Color de texto gris oscuro */
-    font-weight: bold; /* Texto en negrita */
-}
-
-.number-input {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ddd; /* Borde sutil */
-    border-radius: 5px; /* Esquinas redondeadas */
-    font-size: 16px; /* Tamaño de fuente legible */
-    box-sizing: border-box; /* El padding no afecta el ancho total */
-}
-
 /* SECCIÓN DE OPERACIONES - Estilos para los botones */
 .operations {
     margin: 25px 0; /* Espaciado vertical grande */

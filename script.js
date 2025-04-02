@@ -1,49 +1,60 @@
-// Función principal que maneja todas las operaciones
-function realizarOperacion(operacion) {
-    // Obtener valores de los inputs
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const resultadoDiv = document.getElementById('resultado');
+// Función para realizar operaciones con if/else
+function calcularOperacion() {
+    // Primero pedimos la operación al usuario
+    const operacion = prompt(
+        "¿Qué operación deseas realizar?\n" +
+        "1. Sumar (+)\n" +
+        "2. Restar (-)\n" +
+        "3. Multiplicar (×)\n" +
+        "4. Dividir (÷)\n" +
+        "Ingresa el número de la opción:"
+    );
+    // Definimos variables necesarias
+    let resultado;
+    
+    // Pedir los números al usuario
+    const num1 = parseFloat(prompt("Ingrese el primer número:"));
+    const num2 = parseFloat(prompt("Ingrese el segundo número:"));
+    
     // Validar que sean números
     if (isNaN(num1) || isNaN(num2)) {
-        alert("Por favor ingresa números válidos en ambos campos");
+        alert("Error: Debes ingresar números válidos");
         return;
     }
-    let resultado;
-    let simbolo;
-    // Realizar la operación seleccionada
-    switch(operacion) {
-        case 'sumar':
-            resultado = num1 + num2;
-            simbolo = '+';
-            break;
-        case 'restar':
-            resultado = num1 - num2;
-            simbolo = '-';
-            break;
-        case 'multiplicar':
-            resultado = num1 * num2;
-            simbolo = '×';
-            break;
-        case 'dividir':
-            if (num2 === 0) {
-                alert("No se puede dividir entre cero");
-                return;
-            }
-            resultado = num1 / num2;
-            simbolo = '÷';
-            break;
-        default:
-            alert("Operación no válida");
+    // Usando if/else para las operaciones
+    if (operacion === '1' || operacion === 'sumar') {
+        resultado = num1 + num2;
+        simbolo = '+';
+    } 
+    else if (operacion === '2' || operacion === 'restar') {
+        resultado = num1 - num2;
+        simbolo = '-';
+    } 
+    else if (operacion === '3' || operacion === 'multiplicar') {
+        resultado = num1 * num2;
+        simbolo = '×';
+    } 
+    else if (operacion === '4' || operacion === 'dividir') {
+        if (num2 === 0) {
+            alert("Error: No se puede dividir entre cero");
             return;
+        }
+        resultado = num1 / num2;
+        simbolo = '÷';
+    } 
+    else {
+        alert("Operación no válida");
+        return;
     }
-
-    // Mostrar el resultado en el div
-    resultadoDiv.textContent = `${num1} ${simbolo} ${num2} = ${resultado}`;
+    // Mostrar resultado
+    alert(`Resultado: ${num1} ${simbolo} ${num2} = ${resultado}`);
 }
 
 // Asignar eventos a los botones
-document.getElementById('sumar').addEventListener('click', () => realizarOperacion('sumar'));
-document.getElementById('restar').addEventListener('click', () => realizarOperacion('restar'));
-document.getElementById('multiplicar').addEventListener('click', () => realizarOperacion('multiplicar'));
-document.getElementById('dividir').addEventListener('click', () => realizarOperacion('dividir'));
+/*document.getElementById('sumar').addEventListener('click', () => calcular('sumar'));
+document.getElementById('restar').addEventListener('click', () => calcular('restar'));
+document.getElementById('multiplicar').addEventListener('click', () => calcular('multiplicar'));
+document.getElementById('dividir').addEventListener('click', () => calcular('dividir'));
+
+
+*/
