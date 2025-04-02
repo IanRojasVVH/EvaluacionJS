@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- METADATOS BÁSICOS - Fundamental para cualquier página web -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Calculadora Simple</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación con hoja de estilos -->
+</head>
+<body>
+    <!-- HEADER - Ejemplo de semántica HTML5 -->
+    <header class="main-header"> <!-- Etiqueta semántica para el encabezado -->
+        <div class="header-content">
+            <h1>Calculadora Matemática</h1> <!-- Título principal (h1) solo uno por página -->
+            <p>Realiza operaciones básicas con dos números</p> <!-- Texto descriptivo -->
+        </div>
+    </header>
+    <!-- MAIN CONTENT - Contenido principal de la página -->
+    <main class="main-content"> <!-- Etiqueta semántica para el contenido principal -->
+        <div class="calculator-container">
+            <!-- INPUTS - Ejemplo de formularios con labels asociados -->
+            <div class="input-group">
+                <label for="num1">Primer número:</label> <!-- Label asociado al input mediante 'for' -->
+                <input type="number" id="num1" class="number-input"> <!-- Input numérico -->
+            </div>
+            <!-- SEGUNDO INPUT - Misma estructura que el anterior -->
+            <div class="input-group">
+                <label for="num2">Segundo número:</label>
+                <input type="number" id="num2" class="number-input">
+            </div>
+            <!-- BOTONES DE OPERACIONES - Ejemplo de agrupación de elementos interactivos -->
+            <div class="operations">
+                <h3>Selecciona una operación:</h3> <!-- Subtítulo -->
+                <div class="buttons">
+                    <!-- Botones con identificadores únicos para JS -->
+                    <button id="sumar">Sumar (+)</button>
+                    <button id="restar">Restar (-)</button>
+                    <button id="multiplicar">Multiplicar (×)</button>
+                    <button id="dividir">Dividir (÷)</button>
+                </div>
+            </div>
+            
+            <!-- ÁREA DE RESULTADO - Ejemplo de elemento que será modificado dinámicamente -->
+            <div class="result-container">
+                <h3>Resultado:</h3>
+                <div id="resultado" class="result">0</div> <!-- Div vacío para mostrar resultados -->
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER - Ejemplo de pie de página semántico -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2023 Calculadora Simple - Todos los derechos reservados</p> <!-- Copyright -->
+            <p class="footer-links">
+                <!-- Enlaces típicos de pie de página -->
+                <a href="#">Términos de uso</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Contacto</a>
+            </p>
+        </div>
+    </footer>
+    <!-- SCRIPTS - Siempre al final del body para mejor rendimiento -->
+    <script src="script.js"></script> <!-- Inclusión de archivo JavaScript -->
+</body>
+</html>
