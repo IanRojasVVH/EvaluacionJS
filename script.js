@@ -1,7 +1,7 @@
 // Función para realizar operaciones con if/else
 function calcularOperacion() {
     // Primero pedimos la operación al usuario
-    const operacion = prompt(
+    let operacion = prompt(
         "¿Qué operación deseas realizar?\n" +
         "1. Sumar (+)\n" +
         "2. Restar (-)\n" +
@@ -13,8 +13,8 @@ function calcularOperacion() {
     let resultado;
     
     // Pedir los números al usuario
-    const num1 = parseFloat(prompt("Ingrese el primer número:"));
-    const num2 = parseFloat(prompt("Ingrese el segundo número:"));
+    let num1 = parseFloat(prompt("Ingrese el primer número:"));
+    let num2 = parseFloat(prompt("Ingrese el segundo número:"));
     
     // Validar que sean números
     if (isNaN(num1) || isNaN(num2)) {
@@ -49,12 +49,3 @@ function calcularOperacion() {
     // Mostrar resultado
     alert(`Resultado: ${num1} ${simbolo} ${num2} = ${resultado}`);
 }
-
-// Asignar eventos a los botones
-/*document.getElementById('sumar').addEventListener('click', () => calcular('sumar'));
-document.getElementById('restar').addEventListener('click', () => calcular('restar'));
-document.getElementById('multiplicar').addEventListener('click', () => calcular('multiplicar'));
-document.getElementById('dividir').addEventListener('click', () => calcular('dividir'));
-
-
-*/
